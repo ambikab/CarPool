@@ -1,0 +1,118 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#ffffff"
+    android:layout_height="match_parent" >
+
+    <ScrollView
+        android:id="@+id/search_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TableLayout
+            android:id="@+id/search_filter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:stretchColumns="*" >
+
+            <TableRow
+                android:id="@+id/search_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="5dp" >
+
+                <MultiAutoCompleteTextView
+                    android:id="@+id/search_from"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_span="1"
+                    android:maxWidth="50dp"
+                    android:maxLines="1"
+                    android:hint="@string/fromHint" />
+
+                <MultiAutoCompleteTextView
+                    android:maxLines="1"
+                    android:id="@+id/search_to"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_span="1"
+                    android:maxWidth="50dp"
+                    android:hint="@string/toHint" />
+            </TableRow>
+
+            <!-- search button that spans 2 column -->
+
+            <TableRow
+                android:id="@+id/search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp" >
+
+                <!--
+            EditText
+            android:id="@+id/search_date"
+            android:layout_width="30dp"
+            android:layout_height="fill_parent"
+            android:clickable="true"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:inputType="date"
+            android:onClick="showPicker"
+            android:text="@string/dateHint" 
+            android:layout_marginRight="25dp"
+
+                -->
+
+                <LinearLayout
+                    android:id="@+id/button_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_span="2"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/search_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="25dp"
+                        android:background="@drawable/style_blue_button"
+                        android:drawableRight="@drawable/ic_calendar"
+                        android:onClick="showPicker"
+                        android:text="@string/dateHint" />
+
+                    <ImageButton
+                        android:id="@+id/search_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/style_blue_button"
+                        android:contentDescription="@string/searchHint"
+                        android:onClick="fetchResults"
+                        android:src="@drawable/ic_search" />
+                </LinearLayout>
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/result_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/search_form"
+        android:layout_gravity="center"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:orientation="horizontal" >
+
+        <ListView
+            android:id="@+id/results"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </ListView>
+    </LinearLayout>
+</RelativeLayout>

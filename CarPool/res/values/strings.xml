@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Menu and App  and titles -->
+    <string name="app_name">Car Pool</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_logout">Logout</string>
+    <string name="action_account">Home</string>
+    <string name="title_activity_user_home">Car Pool</string>
+    <string name="title_activity_search">Search</string>
+    <string name="title_activity_post">PostActivity</string>
+
+    <!-- Form elements in the activities -->
+    <string name="uNameHint">Name</string>
+    <string name="uEmailHint">Email</string>
+    <string name="uPassHint">Password</string>
+    <string name="uMobHint">Phone</string>
+    <string name="fromHint">From</string>
+    <string name="toHint">To</string>
+    <string name="commentHint">Comments..</string>
+    <string name="dateHint">Date</string>
+    <string name="timeHint">Time</string>
+    <string name="searchHint">Search</string>
+    <string name="formSignIn">Sign-In</string>
+    <string name="formSignUp">Sign-Up</string>
+    <string name="formSave">Save</string>
+    <string name="formDelete">Delete</string>
+    <string name="formCancel">Cancel</string>
+    <string name="logo_description">Logo Image</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_user_account">My Account</string>
+    <string name="title_activity_user_info">My Account</string>
+    <string name="title_activity_user_ride">My Rides</string>
+
+    <!-- array values for string -->
+    <string-array name="time_array">
+        <item>00.00</item>
+        <item>00.30</item>
+        <item>01.00</item>
+        <item>01.30</item>
+        <item>02.00</item>
+        <item>02.30</item>
+        <item>03.00</item>
+        <item>03.30</item>
+        <item>04.00</item>
+        <item>04.30</item>
+        <item>05.00</item>
+        <item>05.30</item>
+        <item>06.00</item>
+        <item>06.30</item>
+        <item>07.00</item>
+        <item>07.30</item>
+        <item>08.00</item>
+        <item>08.30</item>
+        <item>09.00</item>
+        <item>09.30</item>
+        <item>10.00</item>
+        <item>10.30</item>
+        <item>11.00</item>
+        <item>11.30</item>
+        <item>12.00</item>
+        <item>12.30</item>
+        <item>13.00</item>
+        <item>13.30</item>
+        <item>14.00</item>
+        <item>14.30</item>
+        <item>15.00</item>
+        <item>15.30</item>
+        <item>16.00</item>
+        <item>16.30</item>
+        <item>17.00</item>
+        <item>17.30</item>
+        <item>18.00</item>
+        <item>18.30</item>
+        <item>19.00</item>
+        <item>19.30</item>
+        <item>20.00</item>
+        <item>20.30</item>
+        <item>21.00</item>
+        <item>21.30</item>
+        <item>22.00</item>
+        <item>22.30</item>
+        <item>23.00</item>
+        <item>23.30</item>
+    </string-array>
+</resources>

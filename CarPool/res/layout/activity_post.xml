@@ -1,0 +1,102 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/post_form"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <TableLayout
+        android:id="@+id/post_filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:stretchColumns="*" >
+
+        <TableRow
+            android:id="@+id/post_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="5dp" >
+
+            <AutoCompleteTextView
+                android:id="@+id/post_from"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_span="1"
+                android:hint="@string/fromHint"
+                android:maxLines="1"
+                android:maxWidth="50dp" />
+
+            <AutoCompleteTextView
+                android:id="@+id/post_to"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_span="1"
+                android:hint="@string/toHint"
+                android:maxLines="1"
+                android:maxWidth="50dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:padding="5dp" >
+
+            <Spinner
+                android:id="@+id/post_time"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/post_comments"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_span="1"
+                android:hint="@string/commentHint"
+                android:inputType="textLongMessage"
+                android:maxLines="4"
+                android:maxWidth="1000dp"
+                android:minLines="1" />
+        </TableRow>
+
+        <!-- search button that spans 2 column -->
+
+        <TableRow
+            android:id="@+id/search"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp" >
+
+            <LinearLayout
+                android:id="@+id/button_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_span="2"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/post_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="25dp"
+                    android:background="@drawable/style_blue_button"
+                    android:drawableRight="@drawable/ic_calendar"
+                    android:onClick="showPicker"
+                    android:text="@string/dateHint" />
+
+                <ImageButton
+                    android:id="@+id/post_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/style_blue_button"
+                    android:contentDescription="@string/searchHint"
+                    android:onClick="saveRide"
+                    android:src="@drawable/ic_action_save" />
+            </LinearLayout>
+        </TableRow>
+    </TableLayout>
+
+</ScrollView>

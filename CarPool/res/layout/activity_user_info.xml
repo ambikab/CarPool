@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="vertical" >
+
+        <!-- TODO: grey background to be tried: dbdbdb -->
+
+        <RelativeLayout
+            android:id="@+id/uaccount_content_holder"
+            android:layout_width="300dp"
+            android:layout_height="350dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="60dp"
+            android:background="#ffffff" >
+
+            <LinearLayout
+                android:id="@+id/uaccount_banner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center_horizontal"
+                    android:contentDescription="@string/logo_description"
+                    android:src="@drawable/ic_user" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/uaccount_form"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/uaccount_banner"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="15dp" >
+
+                <EditText
+                    android:id="@+id/uaccount_uName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName" >
+
+                    <requestFocus />
+                </EditText>
+                
+                <EditText
+                    android:id="@+id/uaccount_uEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textEmailAddress" 
+                    android:editable="false"
+                    android:focusable="false">
+	
+                    <requestFocus />
+                </EditText>
+
+                <EditText
+                    android:id="@+id/uaccount_uPass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textNoSuggestions"
+                    android:ems="10"  />
+                
+                 <EditText
+                    android:id="@+id/uaccount_uMobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="phone" />
+                 
+                <Button
+                    android:id="@+id/uaccount_save"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/style_blue_button"
+                    android:onClick="update"
+                    android:text="@string/formSave" />
+                
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>
